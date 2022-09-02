@@ -18,12 +18,15 @@ I built this project as a part of École 42 course and to solidify my full stack
 I have used original Instagram app as a look up. Media queries was used to achieve responsive views for mobile, tablet, and any size web browser.  
 
 ### Responsive Sizing: Desktop
-<img width="1229" alt="Screenshot 2022-09-02 at 14 09 25" src="https://user-images.githubusercontent.com/60491116/188128015-779bdc9b-1059-4cd3-a359-9cc15687998c.png">
+<img width="1104" alt="Screenshot 2022-09-02 at 14 24 23" src="https://user-images.githubusercontent.com/60491116/188129484-70a3dbf4-8efe-49f3-9cfb-fb30ff4e3e6d.png">
+<img width="1107" alt="Screenshot 2022-09-02 at 14 23 31" src="https://user-images.githubusercontent.com/60491116/188129506-d446928b-847a-405b-8e6d-64f25fc7bf48.png">
+
 
 ± I displayed my navigation menu on the side for large windows.
 
 ### Responsive Sizing: Mobile
-[image]
+<img width="289" alt="Screenshot 2022-09-02 at 14 21 45" src="https://user-images.githubusercontent.com/60491116/188129557-20a2e057-065a-4515-a797-402524ccb301.png">
+
 
 ± At a certain breakpoint the navigation menu is displayed at the top. The text and image here is still displayed correctly as per screen size.
 
