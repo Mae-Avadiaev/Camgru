@@ -51,7 +51,13 @@ To gain more natural feeling of switching the mail settings I made this inputs s
 
 ### Photo-booth sticker drag with mouse and finger
 
-[explain]
+On desktops the position of mouse is captured on "mouse down" and new position of a sticker is calculated on "mouse move".
+
+[gif]
+
+On mobile devices distance between start of the sticker and "touch start" is calculated and on "touch move" it subtracts from touch coordinates to provide more natural drag experience without shifting.
+
+[gif]
 
 ### Canvas image capturing and custom stickers
 
@@ -62,3 +68,54 @@ When capture button is pressed a drawn image on the canvas (photo) is turned int
 I also added functionality to add custom stickers. 
 
 [image]
+
+### Email notification design
+
+[image]
+
+## Back End 
+
+### Technologies used
+* Node.js 16.17
+* Express 4.18
+* MongoDB, mongoose 6.4
+* bcryptjs 2.4
+* ejs 3.1
+* sharp 0.30
+* nodemailer 6.7
+
+### Data base design 
+
+[image]
+
+* User model contains email settings of a user.
+* All the data is validated before save to DB.
+
+### Document and query middleware
+* Post model and Comment model is populated by user login and avatar before every query.
+* Likes quantity of the Post model is calculated and updated before save and delete of a like.
+* Comments quantity of the Post model is calculated and updated after save of a post. 
+ 
+### Authentication and security
+* All the passwords stored in the Data Base are encrypted by bcryptjs library.
+* Authentication system is built using jsonwebtoken that is held in the cookies of a browser of a user. 
+* Since password reset is less affected by the attacks, password reset token along with email conformation token are encrypted with more performant algorithm "sha256".
+* Photo-booth, post view and user settings are protected routes and are available only by authenticated users. It is checked that a user still exists and that user didn't change their password after the token was issued.
+
+### Error handling
+I've created custom Error class that extends standard error one. Every instance has message, status code, status, and "is operational" flag. Depending on the location different values is assigned to an instance and different error controller behaviour is held:
+* Operational, trusted error -> send message to client
+* Programming or other unknown error -> don't leak error details
+
+### Emails
+Nodemailer and Sengrid service is used to send emails. 
+* When user just signed up and need to confirm their email a mail with token is sent. 
+* When user forgot their password a mail with password reset token is sent.
+* When user got new like and user likes settings is "on" a notification is sent.
+* When user got new comment and user comments settings is "on" a notification is sent.
+
+### Photo
+Multer library is used to upload image to memory storage and then it is processed by sharp library to resize, composite, bring to .jpeg, and save final image.
+
+### Utils
+
