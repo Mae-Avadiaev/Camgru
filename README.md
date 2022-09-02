@@ -18,15 +18,12 @@ I built this project as a part of École 42 course and to solidify my full stack
 I have used original Instagram app as a look up. Media queries was used to achieve responsive views for mobile, tablet, and any size web browser.  
 
 ### Responsive Sizing: Desktop
-<img width="1104" alt="Screenshot 2022-09-02 at 14 24 23" src="https://user-images.githubusercontent.com/60491116/188129484-70a3dbf4-8efe-49f3-9cfb-fb30ff4e3e6d.png">
-<img width="1107" alt="Screenshot 2022-09-02 at 14 23 31" src="https://user-images.githubusercontent.com/60491116/188129506-d446928b-847a-405b-8e6d-64f25fc7bf48.png">
-
+[image]
 
 ± I displayed my navigation menu on the side for large windows.
 
 ### Responsive Sizing: Mobile
-<img width="289" alt="Screenshot 2022-09-02 at 14 21 45" src="https://user-images.githubusercontent.com/60491116/188129557-20a2e057-065a-4515-a797-402524ccb301.png">
-
+[image]
 
 ± At a certain breakpoint the navigation menu is displayed at the top. The text and image here is still displayed correctly as per screen size.
 
@@ -120,5 +117,5 @@ Nodemailer and Sengrid service is used to send emails.
 ### Photo
 Multer library is used to upload image to memory storage and then it is processed by sharp library to resize, composite, bring to .jpeg, and save final image.
 
-### Utils
-
+### Test user feature
+To simplify life to developers who want rapidly get access to all the features of the app I implemented test user feature. It sends request to the public API and gets random first and last name, generate login and provide an "aaaaaaaa" password. Email confirmation link can be clicked on the screen.
