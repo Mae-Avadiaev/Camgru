@@ -2,7 +2,7 @@
 ### Simplified Instagram clone
 
 ## Intro
-I built this project as a part of École 42 course and to solidify my full stack knowledge as well as to create a fun tool for my friends to express theirselves. As a developer I wanted to try server-side template rendering technic and pure JS / CSS / HTML on the front.
+I built this project as a part of École 42 course to solidify my full stack knowledge as well as to create a fun tool for my friends to express themselves. As a developer I wanted to try server-side template rendering technic and pure JS / CSS / HTML on the front.
 
 ## Links
 * View App
@@ -15,7 +15,7 @@ I built this project as a part of École 42 course and to solidify my full stack
 * HTML 5
 * CSS
 
-I have used original Instagram app as a look up. Media queries was used to achieve responsive views for mobile, tablet, and any size web browser.  
+I used original Instagram app as a look up. Media queries were used to achieve responsive views for mobile, tablet, and any size web browser.  
 
 ### Responsive Sizing: Desktop
 [image]
@@ -35,17 +35,17 @@ In the main gallery the limit of posts is 18 to fit all screen sizes. When the u
 
 [gif]
 
-Client-side form validation was created for better user experience. Password is checked for length >= 8 symbols and Password confirm field to match the password.
+Client-side form validation was created for better user experience. Password is checked for length >= 8 symbols and password confirm field is checked to match the password.
 
 [image]
 
 ### Optimistic UI and form with immediate submit
 
-Due to specifics of server side rendering apps "like" and "comment" functions was not so smooth so I implemented optimistic UI to make them more natural and interactive.
+Due to specifics of server side rendering apps, "like" and "comment" functions were not so smooth so I implemented optimistic UI to make them more natural and interactive.
 
 [gif]
 
-To gain more natural feeling of switching the mail settings I made this inputs submit immediately.
+To gain more natural feeling of switching the mail settings, I made this inputs submit immediately.
 
 [gif]
 
@@ -89,33 +89,33 @@ I also added functionality to add custom stickers.
 [image]
 
 * User model contains email settings of a user.
-* All the data is validated before save to DB.
+* All the data is validated before it is saved to DB.
 
 ### Document and query middleware
 * Post model and Comment model is populated by user login and avatar before every query.
-* Likes quantity of the Post model is calculated and updated before save and delete of a like.
-* Comments quantity of the Post model is calculated and updated after save of a post. 
+* The amount of likes on a post is calculated and updated before saving and deleting the like.
+* The amount of comments on a post is calculated and updated after saving the post. 
  
 ### Authentication and security
 * All the passwords stored in the Data Base are encrypted by bcryptjs library.
 * Authentication system is built using jsonwebtoken that is held in the cookies of a browser of a user. 
-* Since password reset is less affected by the attacks, password reset token along with email conformation token are encrypted with more performant algorithm "sha256".
-* Photo-booth, post view and user settings are protected routes and are available only by authenticated users. It is checked that a user still exists and that user didn't change their password after the token was issued.
+* Since password reset is less affected by the attacks, password reset token along with email confirmation token are encrypted with more performant algorithm "sha256".
+* Photo-booth, post view and user settings are protected routes and are available only by authenticated users. It is checked if a user still exists and if user didn't change their password after the token was issued.
 
 ### Error handling
-I've created custom Error class that extends standard error one. Every instance has message, status code, status, and "is operational" flag. Depending on the location different values is assigned to an instance and different error controller behaviour is held:
-* Operational, trusted error -> send message to client
-* Programming or other unknown error -> don't leak error details
+I've created custom Error class that extends standard error class. Every instance has message, status code, status, and "is operational" flag. Depending on the location, different values are assigned to an instance and different error controller behaviour is held:
+* Operational, trusted error -> the message is sent to the client
+* Programming or other unknown error -> error details are not leaked to the client
 
 ### Emails
 Nodemailer and Sengrid service is used to send emails. 
-* When user just signed up and need to confirm their email a mail with token is sent. 
-* When user forgot their password a mail with password reset token is sent.
-* When user got new like and user likes settings is "on" a notification is sent.
-* When user got new comment and user comments settings is "on" a notification is sent.
+* When the user signs up and needs to confirm their email, an e-mail with token is sent. 
+* When the user forgets their password an e-mail with the password reset token is sent.
+* When the user gets a new like and the user's likes setting is "on", a notification is sent.
+* When the user gets a new comment and the user's comments setting is "on", a notification is sent.
 
 ### Photo
-Multer library is used to upload image to memory storage and then it is processed by sharp library to resize, composite, bring to .jpeg, and save final image.
+Multer library is used to upload an image to the memory storage and then it is processed by sharp library to resize, composite, bring to .jpeg, and save final image.
 
 ### Test user feature
-To simplify life to developers who want rapidly get access to all the features of the app I implemented test user feature. It sends request to the public API and gets random first and last name, generate login and provide an "aaaaaaaa" password. Email confirmation link can be clicked on the screen.
+To make it easier for the developers who want to get access to all the features of the app faster, I implemented test user feature. It sends a request to the public API and gets random first and last name, generates login and provides an "aaaaaaaa" password. Email confirmation link can be clicked on the screen.
