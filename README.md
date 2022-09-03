@@ -69,8 +69,6 @@ When capture button is pressed a drawn image on the canvas (photo) is turned int
 
 I also added functionality to add custom stickers. 
 
-<img width="400" alt="Stickers" src="https://user-images.githubusercontent.com/60491116/188256288-e9d28a92-f390-41ee-b645-cf60f1d76e21.jpg">
-
 ### Email notification design
 
 ![IMG_1855](https://user-images.githubusercontent.com/60491116/188257390-8026d429-4864-4a56-ad8f-fb79ae38d07c.jpg)
