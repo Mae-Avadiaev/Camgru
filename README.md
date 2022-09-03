@@ -68,7 +68,7 @@ When capture button is pressed a drawn image on the canvas (photo) is turned int
 
 I also added functionality to add custom stickers. 
 
-![IMG_1850](https://user-images.githubusercontent.com/60491116/188256288-e9d28a92-f390-41ee-b645-cf60f1d76e21.jpg)
+<img width="400" alt="Stickers" src="https://user-images.githubusercontent.com/60491116/188256288-e9d28a92-f390-41ee-b645-cf60f1d76e21.jpg">
 
 ### Email notification design
 
@@ -87,7 +87,7 @@ I also added functionality to add custom stickers.
 
 ### Data base design 
 
-<img width="896" alt="DB design" src="https://user-images.githubusercontent.com/60491116/188258791-d097ffbc-a4ab-4bd6-8130-ce35ae5b7c76.png">
+<img width="400" alt="DB design" src="https://user-images.githubusercontent.com/60491116/188258791-d097ffbc-a4ab-4bd6-8130-ce35ae5b7c76.png">
 
 * User model contains email settings of a user.
 * All the data is validated before it is saved to DB.
