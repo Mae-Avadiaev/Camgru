@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <%- include('./partials/_head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main id="gallery-page">
+            <div class="posts-grid" id="post-grid">
+                <% if (posts.length > 0) { %>
+                    <% posts.forEach(post => { %>
+                        <a href="/posts/<%= post._id %>">
+                            <div class="post">
+                                <img class="photo" src="/img<%= post.image %>"/>
+                                <div class="stats-container">
+                                    <img class="icon like-icon" src="/img/like_icon.png">
+                                    <p><%= post.likesQuantity %></p>
+                                    <img class="icon comment-icon" src="/img/comment_icon.png">
+                                    <p><%= post.commentsQuantity %></p>
+                                </div>
+                            </div>
+                        </a>
+                    <% }) %>
+                <% } %>
+            </div>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>

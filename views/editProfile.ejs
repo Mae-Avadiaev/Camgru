@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <%- include('./partials/_head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main>
+            <div class="account-page">
+                <div class="side-settings-menu">
+                    <a href="/edit-profile">
+                        <p class="settings-section-caption selected">Edit profile</p>
+                    </a>
+                    <a href="/change-password">
+                        <p class="settings-section-caption">Change password</p>
+                    </a>
+                    <a href="/email-notifications">
+                        <p class="settings-section-caption">Email notifications</p>
+                    </a>
+                </div>
+                <div class="settings-section edit-profile">
+                    <div class="caption-part-settings">
+                        <a>
+                            <img class="user-avatar-settings" id="user-avatar-settings" src="/img/<%= user.avatar %>">
+                        </a>
+                        <p class="settings-caption">First name</p>
+                        <p class="settings-caption">Last name</p>
+                        <p class="settings-caption">User name</p>
+                        <p class="settings-caption">Email</p>
+                    </div>
+                    <div class="input-part-settings">
+                        <div class="name-link-container">
+                            <p class="settings-user-name"><%= user.login %></p>
+                            <a class="change-avatar-link" id="change-avatar-link">Change profile photo</a>
+                        </div>
+                        <div class="popup-menu" id="popup-menu">
+                            <p class="popup-heading">Change profile photo</p>
+                            <hr>
+                            <input type="file" accept="image/*" class="avatar-input" id="avatar-input" name="avatar-input">
+                            <label for="avatar-input" class="popup-link upload change-avatar-link">Upload Photo</label>
+                            <hr>
+                            <a class="popup-link remove" id="delete-avatar-button">Remove Current Photo</a>
+                            <hr>
+                            <a class="popup-link cancel" id="cancel">Cancel</a>
+                        </div>
+                        <div class="popup-fade-box" id="popup-fade-box"></div>
+                        <form class="settings-form" id="user-profile-form" enctype="multipart/form-data">
+                            <input class="settings-input" id="first-name" name="firstName" value="<%= user.firstName %>">
+                            <input class="settings-input" id="last-name" name="lastName" value="<%= user.lastName %>">
+                            <input class="settings-input" id="login" name="login" value="<%= user.login %>">
+                            <input class="settings-input" id="email" name="email" value="<%= user.email %>">
+                            <button class="submit settings-submit">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>

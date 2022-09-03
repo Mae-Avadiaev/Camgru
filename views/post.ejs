@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <%- include('./partials/_head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main class="post-large-main">
+            <a href="/">
+                <div class="post-large-fade"></div>
+            </a>
+            <div class="post-large" id="post-large">
+                <img class="post-img-large" id="post-img-large" src="/img<%= post.image %>">
+                <div class="post-side" id="post-side">
+                    <div class="post-header-container" id="post-header-container">
+                        <div class="post-header">
+                            <img class="avatar-small" src="/img/<%= post.user.avatar %>">
+                            <div class="name-and-location">
+                                <p class="post-user-name"><%= post.user.login %></p>
+                                <% if (post.location) { %>
+                                    <p class="post-location"><%= post.location %></p>
+                                <% } %>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <% if (comments.length > 0) {%>
+                        <div class="post-comments" id="post-comments">
+                            <% for (comment of comments) { %>
+                                <div class="comment">
+                                    <img class="avatar-small comment-avatar" src="/img/<%= comment.user.avatar %>">
+                                    <div class="comment-body-container">
+                                        <div class="comment-login-body-container">
+                                            <p class="post-user-name"><%= comment.user.login %></p>
+                                            <p class="comment-message"><%= comment.body %></p>
+                                        </div>
+                                        <p class="post-date comment-date"><%= comment.date.toLocaleString('en-us', {
+                                                day: 'numeric',
+                                                month: 'long',
+                                                year: 'numeric'
+                                            }).toUpperCase() %></p>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                    <% } else { %>
+                        <div class="post-no-comments" id="post-no-comments">
+                            <p class="no-comments-heading">No comments yet.</p>
+                            <p class="no-comments-text">Start the conversation.</p>
+                        </div>
+                    <% } %>
+                    <div class="post-footer" id="post-footer">
+                        <hr id="hr">
+                        <div class="post-actions">
+                            <img class="action-icon like-action" id="like-action" src="<%= liked ? '/img/like_filled.PNG' : '/img/like_unfilled.PNG' %>">
+                            <img class="action-icon comment-action" id="comment-action" src="/img/comment_unfilled.PNG">
+                        </div>
+                        <% if (post.likesQuantity > 0) {%>
+                            <p class="post-likes">Liked by <span><%= post.likesQuantity %></span> people</p>
+                        <% } else { %>
+                            <p  class="post-likes">Be the first who <span>like</span> this post</p>
+                        <% } %>
+                        <p class="post-date"><%= post.dateOfPublication.toLocaleString('en-us', {
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric'
+                        }).toUpperCase() %></p>
+                        <hr>
+                        <div class="comment-container" id="comment-container">
+                            <div id="comment-field" contenteditable="true"  class="comment-field" data-ph="Add a comment..."></div>
+                            <button disabled id="post-comment-btn" class="post-comment-btn">Post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

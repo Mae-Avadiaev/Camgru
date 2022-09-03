@@ -1,0 +1,40 @@
+<header>
+    <a class="header-container-a" href="/">
+        <div class="header-container">
+            <h2 class="logo-text">
+                Camagru
+            </h2>
+            <img class="gallery-icon" src="/img/pngwing.com.png" alt="gallery icon"/>
+        </div>
+    </a>
+    <a class="camera-icon-a" href="/photo-booth">
+        <img class="camera-icon" src="/img/camera-icon.png">
+    </a>
+    <% if (locals.user) {%>
+        <div class="buttons-signed-in">
+            <a class="user-container" id="user-container">
+                <p class="user-login-small"><%= user.login %></p>
+                <img class="user-avatar-small" src="/img/<%= user.avatar %>">
+                <div class="dropdown-container" id="dropdown">
+                    <a class="dropdown-item" id="settings-button" href="/edit-profile">
+                        <img class="dropdown-img" src="/img/settings-icon.PNG">
+                        <p class="dropdown-caption">Settings</p>
+                    </a>
+                    <hr>
+                    <a class="dropdown-item" id="sign-out-btn">
+                        <p class="dropdown-caption">Sign out</p>
+                    </a>
+                </div>
+            </a>
+        </div>
+    <% } else { %>
+        <div class="buttons">
+            <a href="/sign-in">
+                <button class="header-button">SIGN IN</button>
+            </a>
+            <a href="/sign-up">
+                <button class="header-button">SIGN UP</button>
+            </a>
+        </div>
+    <% } %>
+</header>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+        <%- include('./partials/_head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main>
+            <div class="account-page">
+                <div class="side-settings-menu">
+                    <a href="/edit-profile">
+                        <p class="settings-section-caption">Edit profile</p>
+                    </a>
+                    <a href="/change-password">
+                        <p class="settings-section-caption">Change password</p>
+                    </a>
+                    <a href="/email-notifications">
+                        <p class="settings-section-caption selected">Email notifications</p>
+                    </a>
+                </div>
+                <div class="settings-section email-notifications" id="email-notifications">
+                    <form class="notification-item" id="likes-notifications">
+                        <p class="notification-name">Likes</p>
+                        <div class="radio-container">
+                            <input class="radio-button likes-notifications-button" type="radio" id="likes-off" name="likes" value="0"<%= !user.emailSettings.likes ? 'checked' : '' %>>
+                            <label class="radio-label" for="likes-off">Off</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="radio-button likes-notifications-button" type="radio" id="likes-on" name="likes" value="1" <%= user.emailSettings.likes ? 'checked' : '' %>>
+                            <label class="radio-label" for="likes-on">On</label>
+                        </div>
+                        <p class="notification-caption">You'll get notification when someone will like your post.</p>
+                        <hr>
+                    </form>
+                    <form class="notification-item" id="comments-notifications">
+                        <p class="notification-name">Comments</p>
+                        <div class="radio-container">
+                            <input class="radio-button comments-notifications-button" type="radio" id="comments-off" name="comments" value="0" <%= !user.emailSettings.comments ? 'checked' : '' %>>
+                            <label class="radio-label" for="comments-off">Off</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="radio-button comments-notifications-button" type="radio" id="comments-on" name="comments" value="1" <%= user.emailSettings.comments ? 'checked' : '' %>>
+                            <label class="radio-label" for="comments-on">On</label>
+                        </div>
+                        <p class="notification-caption">You'll get notification when someone will comment on your post.</p>
+                        <hr>
+                    </form>
+                    <form class="notification-item" id="support-notifications">
+                        <p class="notification-name">Support</p>
+                        <div class="radio-container">
+                            <input class="radio-button support-notifications-button" type="radio" id="support-off" name="support" value="0" <%= !user.emailSettings.support ? 'checked' : '' %>>
+                            <label class="radio-label" for="support-off">Off</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="radio-button support-notifications-button" type="radio" id="support-on" name="support" value="1" <%= user.emailSettings.support ? 'checked' : '' %>>
+                            <label class="radio-label" for="support-on">On</label>
+                        </div>
+                        <p class="notification-caption">You'll get notification when there will be an update or a new feature.</p>
+                        <hr>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>

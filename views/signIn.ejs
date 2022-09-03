@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <%- include('./partials/_head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main>
+            <form class="form sign-in-form" action="" id="sign-in-form">
+                <label for="login" class="label">Login</label>
+                <input type="text" id="login" name="login" class="input">
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" name="password" class="input">
+                <div class="submit-container">
+                    <input disabled type="submit" id="submit" class="submit" value="SIGN IN">
+                </div>
+                <a class="forgot-password change-avatar-link forgot-sign-in" id="password-reset-link" href="/password-reset">
+                    Forgot password?
+                </a>
+            </form>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>

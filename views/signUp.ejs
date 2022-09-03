@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <%- include('./partials/_head.ejs') %>
+    <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <form class="form sign-up-form" action="" id="sign-up-form">
+            <label for="login" class="label first-label">Login</label>
+            <input type="text" id="login" name="login"  class="input">
+            <label for="email" class="label">Email</label>
+            <input type="email" id="email" name="email" class="input">
+            <label for="first-name" class="label">First name</label>
+            <input type="text" id="first-name" name="firstName" class="input">
+            <label for="last-name" class="label">Last name</label>
+            <input type="text" id="last-name" name="lastName" class="input">
+            <label for="password" class="label">Password</label>
+            <input type="password" id="password" name="password" class="input">
+            <label for="password-confirm" class="label">Confirm password</label>
+            <input type="password" id="password-confirm" name="confirmPassword" class="input">
+            <div class="container-two-btns">
+                <div class="submit-container left-submit-container">
+                    <input disabled type="submit" id="submit" value="SIGN UP" class="submit">
+                </div>
+                <div class="submit-container right-submit-container">
+                    <button id="test-user-btn" class="submit test-user-btn">TEST USER</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+    </body>
+</html>

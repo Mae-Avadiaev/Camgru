@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <%- include('./partials/_head.ejs') %>
+    <body class="photo-body">
+        <%- include('./partials/header.ejs') %>
+        <main class="photo-booth" id="photo-booth">
+            <div class="booth-preview" id="booth-preview">
+            <% if (!user.thumbnail) { %>
+                <video autoplay="autoplay" id="video-elem" class="video-elem">Video stream not available.</video>
+                <canvas class="canvas" id="canvas"></canvas>
+                <img class="superpasable-preview" id="superposable-preview" draggable="true">
+            <% } else { %>
+                <img class="thumbnail" src="/img/thumbnails/<%= user.thumbnail %>">
+                <div class="post-cross-container">
+                    <img class="booth-button cross" id="cross-button" src="/img/cross.png">
+                    <p class="post-button" id="post-button">POST</p>
+                </div>
+            <% } %>
+            <%if (!user.thumbnail) { %>
+                <div class="booth-button-container">
+                    <input type="file" accept="image/*" class="avatar-input" id="photo-input" name="photo-input">
+                    <img class="booth-button upload-photo" id="upload-photo-button" src="/img/upload-photo.png">
+                    <img class="booth-button capture-button" id="capture-button" src="/img/capture-button.png">
+                    <img class="booth-button rotate-camera" id="rotate-camera-button" src="/img/rotate-camera.png">
+                </div>
+            <% } %>
+            </div>
+            <div class="booth-side">
+                <div class="superposable-item">
+                    <p class="superposable-caption sup-add-caption">Add custom sticker</p>
+                    <input type="file" accept="image/png" class="avatar-input" id="superposable-input" name="superposable-input">
+                    <p class="superposable-add-button" id="superposable-add-button">+</p>
+                </div>
+            <% for (let i = 0; i < superposables.length; i++) { %>
+                <div class="superposable-item">
+                    <p class="superposable-caption"><%= superposables[i].split('.')[0].replaceAll('_', ' ')%></p>
+                    <img class="superposable-img" src="/img/superposable/<%= superposables[i] %>">
+                </div>
+            <% } %>
+            </div>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>
