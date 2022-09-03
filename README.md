@@ -2,7 +2,7 @@
 ### Instagram-like app
 
 ## Intro
-I built this project as a part of École 42 course to solidify my full stack knowledge as well as to create a fun tool for my friends to express themselves. As a developer I wanted to try server-side template rendering technic and pure JS / CSS / HTML on the front.
+I built this project as a part of École 42 course to solidify my full stack knowledge as well as to create a fun tool for my friends to express themselves. There was the restriction not to use frameworks on the front-end in the assignment. So I have chosen server-side template rendering technic and pure JS / CSS / HTML on the front.
 
 ## Links
 * View App
