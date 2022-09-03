@@ -56,10 +56,9 @@ To gain more natural feeling of switching the mail settings, I made this inputs 
 
 On desktops the position of mouse is captured on "mouse down" and new position of a sticker is calculated on "mouse move".
 
-![3](https://user-images.githubusercontent.com/60491116/188265126-ed05038b-91c2-4509-9953-b850de8bb8e5.gif)
-
 On mobile devices distance between start of the sticker and "touch start" is calculated and on "touch move" it subtracts from touch coordinates to provide more natural drag experience without shifting.
 
+![3](https://user-images.githubusercontent.com/60491116/188265126-ed05038b-91c2-4509-9953-b850de8bb8e5.gif)
 
 ### Canvas image capturing and custom stickers
 
