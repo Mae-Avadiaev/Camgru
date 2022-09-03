@@ -25,7 +25,7 @@ I displayed likes and comments section of the post on the side for the large win
 
 ### Responsive Sizing: Mobile
 
-![IMG_1843](https://user-images.githubusercontent.com/60491116/188255651-a74e7039-305d-4eb2-ae2f-6aad9c8beaeb.jpg)
+![IMG_1843](https://user-images.githubusercontent.com/60491116/188257386-f53fb865-a574-4816-a4d0-95eb997afd17.jpg)
 
 At a certain breakpoint likes and comments section is displayed at the bottom. Same with the stickers.
 
@@ -72,7 +72,7 @@ I also added functionality to add custom stickers.
 
 ### Email notification design
 
-[image]
+![IMG_1855](https://user-images.githubusercontent.com/60491116/188257390-8026d429-4864-4a56-ad8f-fb79ae38d07c.jpg)
 
 ## Back End 
 
