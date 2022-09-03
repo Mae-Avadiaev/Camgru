@@ -44,27 +44,27 @@ Client-side form validation was created for better user experience. Password is 
 
 Due to specifics of server side rendering apps, "like" and "comment" functions were not so smooth so I implemented optimistic UI to make them more natural and interactive.
 
-[gif]
+![2](https://user-images.githubusercontent.com/60491116/188265100-10201777-073e-42ae-b444-05e3799543b6.gif)
 
 To gain more natural feeling of switching the mail settings, I made this inputs submit immediately.
 
-[gif]
+![1](https://user-images.githubusercontent.com/60491116/188265109-671b25cb-2bd5-4aa1-91ad-85dabde0a0d9.gif)
+
 
 ### Photo-booth sticker drag with mouse and finger
 
 On desktops the position of mouse is captured on "mouse down" and new position of a sticker is calculated on "mouse move".
 
-[gif]
+![3](https://user-images.githubusercontent.com/60491116/188265126-ed05038b-91c2-4509-9953-b850de8bb8e5.gif)
 
 On mobile devices distance between start of the sticker and "touch start" is calculated and on "touch move" it subtracts from touch coordinates to provide more natural drag experience without shifting.
 
-[gif]
 
 ### Canvas image capturing and custom stickers
 
 When capture button is pressed a drawn image on the canvas (photo) is turned into blob and packed in the form data along with the name of a superposable image (sticker) and its coordinates and upload on the server. 
 
-[gif]
+![4](https://user-images.githubusercontent.com/60491116/188265156-1ed465f2-39b0-478d-9a9f-f204dafa0336.gif)
 
 I also added functionality to add custom stickers. 
 
