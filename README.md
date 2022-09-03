@@ -19,13 +19,13 @@ I used original Instagram app as a look up. Media queries were used to achieve r
 
 ### Responsive Sizing: Desktop
 
-![IMG_1836](https://user-images.githubusercontent.com/60491116/188254565-5df978e5-ccfc-4faa-a38d-c576cce70a1b.jpg)
+![IMG_1844](https://user-images.githubusercontent.com/60491116/188255645-57bdd0fb-52dc-4f1e-8024-25e832bd4c41.jpg)
 
 I displayed likes and comments section of the post on the side for the large windows. Same with the stickers in the photo-booth. 
 
 ### Responsive Sizing: Mobile
 
-![IMG_1842](https://user-images.githubusercontent.com/60491116/188255268-b62ba653-046a-45c7-8286-a7498cf0b721.jpg)
+![IMG_1843](https://user-images.githubusercontent.com/60491116/188255651-a74e7039-305d-4eb2-ae2f-6aad9c8beaeb.jpg)
 
 At a certain breakpoint likes and comments section is displayed at the bottom. Same with the stickers.
 
