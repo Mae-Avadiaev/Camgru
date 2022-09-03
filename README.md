@@ -48,7 +48,9 @@ Due to specifics of server side rendering apps, "like" and "comment" functions w
 
 To gain more natural feeling of switching the mail settings, I made this inputs submit immediately.
 
-![1](https://user-images.githubusercontent.com/60491116/188265109-671b25cb-2bd5-4aa1-91ad-85dabde0a0d9.gif)
+![1]()
+<img width="400" alt="3" src="https://user-images.githubusercontent.com/60491116/188265109-671b25cb-2bd5-4aa1-91ad-85dabde0a0d9.gif">
+
 
 
 ### Photo-booth sticker drag with mouse and finger
