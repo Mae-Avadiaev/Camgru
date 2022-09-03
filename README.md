@@ -34,7 +34,7 @@ Axios was used to send requests and post data to the server.
 
 In the main gallery the limit of posts is 18 to fit all screen sizes. When the user comes to the end of the page new Axios request forms and new posts appear. 
 
-[gif]
+![5](https://user-images.githubusercontent.com/60491116/188272938-7ddf420d-d8d2-4717-82bb-ccea8a26914e.gif)
 
 Client-side form validation was created for better user experience. Password is checked for length >= 8 symbols and password confirm field is checked to match the password.
 
