@@ -38,7 +38,7 @@ In the main gallery the limit of posts is 18 to fit all screen sizes. When the u
 
 Client-side form validation was created for better user experience. Password is checked for length >= 8 symbols and password confirm field is checked to match the password.
 
-[image]
+![IMG_1848](https://user-images.githubusercontent.com/60491116/188256294-03364547-824b-4bbb-a91d-a629201d413c.jpg)
 
 ### Optimistic UI and form with immediate submit
 
@@ -68,7 +68,7 @@ When capture button is pressed a drawn image on the canvas (photo) is turned int
 
 I also added functionality to add custom stickers. 
 
-[image]
+![IMG_1850](https://user-images.githubusercontent.com/60491116/188256288-e9d28a92-f390-41ee-b645-cf60f1d76e21.jpg)
 
 ### Email notification design
 
