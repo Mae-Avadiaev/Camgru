@@ -44,7 +44,7 @@ Client-side form validation was created for better user experience. Password is 
 
 Due to specifics of server side rendering apps, "like" and "comment" functions were not so smooth so I implemented optimistic UI to make them more natural and interactive.
 
-![2](https://user-images.githubusercontent.com/60491116/188265100-10201777-073e-42ae-b444-05e3799543b6.gif)
+<img width="400" alt="2" src="https://user-images.githubusercontent.com/60491116/188265100-10201777-073e-42ae-b444-05e3799543b6.gif">
 
 To gain more natural feeling of switching the mail settings, I made this inputs submit immediately.
 
