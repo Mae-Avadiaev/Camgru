@@ -18,7 +18,8 @@ I built this project as a part of École 42 course to solidify my full stack kno
 I used original Instagram app as a look up. Media queries were used to achieve responsive views for mobile, tablet, and any size web browser.  
 
 ### Responsive Sizing: Desktop
-[image]
+![IMG_1836](https://user-images.githubusercontent.com/60491116/188254565-5df978e5-ccfc-4faa-a38d-c576cce70a1b.jpg)
+
 
 ± I displayed my navigation menu on the side for large windows.
 
