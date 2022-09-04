@@ -1,4 +1,4 @@
-import {signUp, retrieveTestUserData} from './signUp'
+import {signUp, createTestUserData} from './signUp'
 import {signIn, signOut} from './signIn'
 import {updateSettings} from './updateSettings'
 import {sendLink, resetPassword} from "./resetPassword"
@@ -444,13 +444,13 @@ window.onload = () => {
         testUserBtn.addEventListener('click', async (e) => {
             e.preventDefault()
 
-            const data = await retrieveTestUserData()
+            const data = createTestUserData()
             const nameData = data[0]
             const lastNameData = data[1]
             const composedLogin = nameData.substring(0, 1).toLowerCase() + lastNameData.toLowerCase()
 
             login.value = composedLogin
-            email.value = `${composedLogin}@yahoo.com`
+            email.value = `${composedLogin}@camgru.com`
             firstName.value = nameData
             lastName.value = lastNameData
             password.value = 'aaaaaaaa'

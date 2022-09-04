@@ -30,21 +30,20 @@ export const signUp = async (data) => {
     }
 }
 
-export const retrieveTestUserData = async () => {
+export const createTestUserData = () => {
 
-    const randomNumber = Math.floor(Math.random() * 2) + 1
-    const sexOption = randomNumber === 1 ? 'nameOptions=boy_names' : 'nameOptions=girl_names'
+    const firstNames = [
+        "Joye", "Henry", "Diederich", "Günther", "Regin", "Ksenija", "Théa", "Sulaiman", "Ellinor", "Miloslav"
 
-    try {
-        const res = await axios({
-            method: 'GET',
-            url: `https://cors-anywhere.herokuapp.com/http://names.drycodes.com/1?${sexOption}&separator=space`,
-        })
+    ]
+    const lastNames = [
+        "Gilroy", "Ryōichi", "Mailcun", "Liudmila", "Eugen", "Sára", "Defne", "Yamilet", "Alina",  "Mayumi"
+    ]
 
-        return res.data[0].split(' ')
+    const randomNumber1 = Math.floor(Math.random() * 9.9)
+    const randomNumber2 = Math.floor(Math.random() * 9.9)
+    const data = []
+    data.push(firstNames[randomNumber1], lastNames[randomNumber2])
 
-    } catch (err) {
-        console.log(err.response)
-        showAlert('error', err.response.data.message);
-    }
+    return data
 }

@@ -23,7 +23,7 @@ const upload = multer({
 
 exports.deletePreviousAvatar = catchAsync(async (req, res, next) => {
 
-    if (req.user.avatar !== 'defaultUserPhoto.png') {
+    if (req.user.avatar !== 'defaultUserPhoto.png' && req.user.avatar !== 'test_user_avatar.jpg') {
         await fs.unlink(resolve(`./public/img/${req.user.avatar}`), (err) => {
            if (err) throw err
         })
