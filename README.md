@@ -1,8 +1,8 @@
 # Camgru
-### Simplified Instagram clone
+### Instagram-like app
 
 ## Intro
-I built this project as a part of École 42 course to solidify my full stack knowledge as well as to create a fun tool for my friends to express themselves. As a developer I wanted to try server-side template rendering technic and pure JS / CSS / HTML on the front.
+I built this project as a part of École 42 course to solidify my full stack knowledge as well as to create a fun tool for my friends to express themselves. There was the restriction not to use frameworks on the front-end in the assignment. So I have chosen server-side template rendering technic and pure JS / CSS / HTML on the front.
 
 ## Links
 * View App
@@ -56,10 +56,9 @@ To gain more natural feeling of switching the mail settings, I made this inputs 
 
 On desktops the position of mouse is captured on "mouse down" and new position of a sticker is calculated on "mouse move".
 
-![3](https://user-images.githubusercontent.com/60491116/188265126-ed05038b-91c2-4509-9953-b850de8bb8e5.gif)
-
 On mobile devices distance between start of the sticker and "touch start" is calculated and on "touch move" it subtracts from touch coordinates to provide more natural drag experience without shifting.
 
+![3](https://user-images.githubusercontent.com/60491116/188265126-ed05038b-91c2-4509-9953-b850de8bb8e5.gif)
 
 ### Canvas image capturing and custom stickers
 
